@@ -1,4 +1,8 @@
 package com.selva.newsapp.repository
 
-class NewsRepository {
+import com.selva.newsapp.db.ArticleDatabase
+
+class NewsRepository(
+    val db: ArticleDatabase
+) {
 }
