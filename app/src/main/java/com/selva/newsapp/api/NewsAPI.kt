@@ -1,6 +1,6 @@
 package com.selva.newsapp.api
 
-import com.selva.newsapp.ui.NewsResponse
+import com.selva.newsapp.models.NewsResponse
 import com.selva.newsapp.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET

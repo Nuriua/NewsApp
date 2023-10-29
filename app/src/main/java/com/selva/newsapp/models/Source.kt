@@ -1,4 +1,4 @@
-package com.selva.newsapp.ui
+package com.selva.newsapp.models
 
 
 import com.google.gson.annotations.SerializedName

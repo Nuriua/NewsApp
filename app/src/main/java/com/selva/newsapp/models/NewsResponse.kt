@@ -1,7 +1,8 @@
-package com.selva.newsapp.ui
+package com.selva.newsapp.models
 
 
 import com.google.gson.annotations.SerializedName
+import com.selva.newsapp.models.Article
 
 data class NewsResponse(
     @SerializedName("articles")
