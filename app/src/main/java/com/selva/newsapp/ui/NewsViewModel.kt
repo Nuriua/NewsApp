@@ -1,4 +1,8 @@
 package com.selva.newsapp.ui
 
-class NewsViewModel {
+import androidx.lifecycle.ViewModel
+
+class NewsViewModel(
+    val newsRepository: NewsRepository
+) : ViewModel{
 }
