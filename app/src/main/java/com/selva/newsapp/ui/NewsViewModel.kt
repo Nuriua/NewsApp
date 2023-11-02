@@ -15,6 +15,10 @@ class NewsViewModel(
     val breakingNews: MutableLiveData<com.selva.newsapp.util.Resource<NewsResponse>> = MutableLiveData()
     var breakingNewsPage = 1
 
+    init {
+        getBreakingNews("us")
+    }
+
     fun getBreakingNews(countryCode: String) = viewModelScope.launch {
         breakingNews.postValue(Resource.Loading())
         val response = newsRepository.getBreakingNews(countryCode, breakingNewsPage)
