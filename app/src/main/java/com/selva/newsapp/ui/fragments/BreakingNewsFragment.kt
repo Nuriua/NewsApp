@@ -1,6 +1,5 @@
 package com.selva.newsapp.ui.fragments
 
-import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -17,11 +16,14 @@ import androidx.lifecycle.Observer
 class BreakingNewsFragment: Fragment(R.layout.fragment_bracking_news) {
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
+    val TAG = "BreakingNewsFragment"
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as NewsActivity).viewModel
+
         setupRecyclerView()
+
         viewModel.breakingNews.observe(viewLifecycleOwner, Observer { response ->
             when(response) {
                 is Resource.Success -> {
